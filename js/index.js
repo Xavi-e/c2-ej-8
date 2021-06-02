@@ -13,7 +13,7 @@ class Personaje {
     this.serie = serie;
   }
   comunicar(frase) {
-    return frase;
+    return `Soy ${this.nombre} y digo: ${frase}.`;
   }
   morir() {
     this.vivo = false;
@@ -27,7 +27,7 @@ class Rey extends Personaje {
     this.anyosreinado = anyosreinado;
   }
   comunicar() {
-    return "Vais a morir todos";
+    return `Soy ${this.nombre} y digo: Vais a morir todos.`;
   }
 }
 
@@ -38,7 +38,7 @@ class Asesor extends Personaje {
     this.personajeAlQueAsesora = personajeAlQueAsesora;
   }
   comunicar() {
-    return "No sé por qué, pero creo que voy a morir pronto";
+    return `Soy ${this.nombre} y digo: No sé por qué, pero creo que voy a morir pronto.`;
   }
 }
 
@@ -58,6 +58,6 @@ class Escudero extends Personaje {
     this.gradoDePelotismo = gradoDePelotismo;
   }
   comunicar() {
-    return "Soy un loser";
+    return `Soy ${this.nombre} y digo: Soy un loser.`;
   }
 }
