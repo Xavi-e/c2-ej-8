@@ -62,6 +62,26 @@ class Escudero extends Personaje {
   }
 }
 
+class Luchador extends Personaje {
+  arma;
+  destreza;
+  constructor(
+    nombre,
+    familia,
+    edad,
+    serie,
+    arma,
+    destreza
+  ) {
+    super(nombre, familia, edad, serie);
+    this.arma = arma;
+    this.destreza = destreza;
+  }
+  comunicar() {
+    console.log( `Soy ${this.nombre} y digo: Primero pego y luego pregunto.`);
+  }
+}
+
 // Funciones
 const getMensajesLuchadores = (personajes) =>
   personajes
