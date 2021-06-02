@@ -19,3 +19,14 @@ class Personaje {
     this.vivo = false;
   }
 }
+
+class Asesor extends Personaje {
+  personajeAlQueAsesora;
+  constructor(nombre, familia, edad, serie, personajeAlQueAsesora) {
+    super(nombre, familia, edad, serie);
+    this.personajeAlQueAsesora = personajeAlQueAsesora;
+  }
+  comunicar() {
+    return "No sé por qué, pero creo que voy a morir pronto";
+  }
+}
