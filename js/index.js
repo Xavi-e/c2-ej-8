@@ -30,3 +30,23 @@ class Asesor extends Personaje {
     return "No sé por qué, pero creo que voy a morir pronto";
   }
 }
+
+class Escudero extends Personaje {
+  personajeAlQueSirve;
+  gradoDePelotismo;
+  constructor(
+    nombre,
+    familia,
+    edad,
+    serie,
+    personajeAlQueAsesora,
+    gradoDePelotismo
+  ) {
+    super(nombre, familia, edad, serie);
+    this.personajeAlQueAsesora = personajeAlQueAsesora;
+    this.gradoDePelotismo = gradoDePelotismo;
+  }
+  comunicar() {
+    return "Soy un loser";
+  }
+}
