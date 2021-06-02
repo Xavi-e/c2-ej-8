@@ -13,7 +13,7 @@ class Personaje {
     this.serie = serie;
   }
   comunicar(frase) {
-    return `Soy ${this.nombre} y digo: ${frase}.`;
+    return `Soy ${this.nombre} y digo: ${frase}`;
   }
   morir() {
     this.vivo = false;
@@ -65,20 +65,13 @@ class Escudero extends Personaje {
 class Luchador extends Personaje {
   arma;
   destreza;
-  constructor(
-    nombre,
-    familia,
-    edad,
-    serie,
-    arma,
-    destreza
-  ) {
+  constructor(nombre, familia, edad, serie, arma, destreza) {
     super(nombre, familia, edad, serie);
     this.arma = arma;
     this.destreza = destreza;
   }
   comunicar() {
-    console.log( `Soy ${this.nombre} y digo: Primero pego y luego pregunto.`);
+    console.log(`Soy ${this.nombre} y digo: Primero pego y luego pregunto.`);
   }
 }
 
