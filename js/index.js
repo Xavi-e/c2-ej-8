@@ -20,6 +20,20 @@ class Personaje {
   }
 }
 
+
+class Rey extends Personaje{
+    anyosreinado;
+
+    constructor(nombre, familia, edad, serie, anyosreinado) {
+      super(nombre, familia, serie);
+      this.anyosreinado = anyosreinado;
+    }
+
+    comunicar(){
+      return "Vais a morir todos"
+    };
+
+
 class Asesor extends Personaje {
   personajeAlQueAsesora;
   constructor(nombre, familia, edad, serie, personajeAlQueAsesora) {
@@ -49,4 +63,5 @@ class Escudero extends Personaje {
   comunicar() {
     return "Soy un loser";
   }
+
 }
