@@ -19,3 +19,17 @@ class Personaje {
     this.vivo = false;
   }
 }
+
+class Rey extends Personaje{
+    anyosreinado;
+
+    constructor(nombre, familia, edad, serie, anyosreinado) {
+      super(nombre, familia, serie);
+      this.anyosreinado = anyosreinado;
+    }
+
+    comunicar(){
+      return "Vais a morir todos"
+    };
+
+}
