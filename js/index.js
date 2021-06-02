@@ -61,3 +61,9 @@ class Escudero extends Personaje {
     return `Soy ${this.nombre} y digo: Soy un loser.`;
   }
 }
+
+// Funciones
+const getMensajesLuchadores = (personajes) =>
+  personajes
+    .filter((personaje) => personaje.arma !== undefined)
+    .map((luchador) => luchador.comunicar());
