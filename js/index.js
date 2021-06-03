@@ -90,14 +90,14 @@ const personajesPorEdad = (personajes) =>
 const personajesPorTipo = (personajes) =>
   personajes.reduce((acumulador, personaje) => {
     const tipo = typeof personaje.constructor.name;
-    const personajesDelTipo = acumulador.find(
+    const personajeDelTipo = acumulador.find(
       (personaje) =>
         personaje.constructor.name.toLowerCase() === tipo.toLowerCase()
     );
-    if (personajesDelTipo) {
-      personajesDelTipo.personajes.push(personaje);
-      personajesDelTipo.personajes = personajesPorEdad(
-        personajesDelTipo.personajes
+    if (personajeDelTipo) {
+      personajeDelTipo.personajes.push(personaje);
+      personajeDelTipo.personajes = personajesPorEdad(
+        personajeDelTipo.personajes
       );
       return acumulador;
     } else {
