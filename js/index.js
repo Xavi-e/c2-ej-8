@@ -76,10 +76,13 @@ class Luchador extends Personaje {
 }
 
 // Funciones
-const getMensajesLuchadores = (personajes) =>
+const getMensajesClase = (personajes, clase) =>
   personajes
-    .filter((personaje) => personaje.constructor.name === "Luchador")
-    .map((luchador) => luchador.comunicar());
+    .filter(
+      (personaje) =>
+        personaje.constructor.name.toLowerCase() === clase.toLowerCase()
+    )
+    .map((tipoPersonaje) => tipoPersonaje.comunicar());
 
 const personajesPorEdad = (personajes) =>
   personajes.sort(({ edad: edad1 }, { edad: edad2 }) => edad1 - edad2);
@@ -88,7 +91,8 @@ const personajesPorTipo = (personajes) =>
   personajes.reduce((acumulador, personaje) => {
     const tipo = typeof personaje.constructor.name;
     const personajesDelTipo = acumulador.find(
-      (personaje) => personaje.constructor.name === tipo
+      (personaje) =>
+        personaje.constructor.name.toLowerCase() === tipo.toLowerCase()
     );
     if (personajesDelTipo) {
       personajesDelTipo.personajes.push(personaje);
